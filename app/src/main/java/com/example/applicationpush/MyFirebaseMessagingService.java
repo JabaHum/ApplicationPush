@@ -21,13 +21,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
             Log.d("Token","Remote Message"+remoteMessage.getNotification().getBody());
 
-
-            //Log.d(" Remote Message: ",remoteMessage.getNotification().getBody());
-
-            Toast.makeText(getApplicationContext(),"Remote Message"+remoteMessage.getNotification().getBody(), Toast.LENGTH_SHORT).show();
-        }
-
-
         //getting the title and the body
         String title = remoteMessage.getNotification().getTitle();
         String body = remoteMessage.getNotification().getBody();
@@ -36,6 +29,10 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         EzyAgricNotificationManager.getInstance(getApplicationContext()).displayNotification(title, body);
         Log.d("MyNotification", remoteMessage.getNotification().toString());
         Log.d("MyNotification", remoteMessage.getNotification().toString());
+            //Log.d(" Remote Message: ",remoteMessage.getNotification().getBody());
+
+            Toast.makeText(getApplicationContext(),"Remote Message"+remoteMessage.getNotification().getBody(), Toast.LENGTH_SHORT).show();
+        }
 
 
     }
