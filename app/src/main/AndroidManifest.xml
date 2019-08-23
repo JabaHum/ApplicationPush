@@ -11,7 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".PushDetailsActivity"></activity>
+        <activity
+            android:name=".PushDetailsActivity"
+
+            android:parentActivityName=".MainActivity"
+            tools:targetApi="jelly_bean" />
         <!-- Launcher Activity -->
         <activity android:name=".MainActivity">
             <intent-filter>

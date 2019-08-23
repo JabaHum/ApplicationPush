@@ -36,7 +36,9 @@ public class EzyAgricNotificationManager {
         mBuilder.setContentTitle(title);
         mBuilder.setContentText(message);
 
-        Intent resultIntent  =  new Intent(mCtx,MainActivity.class);
+        Intent resultIntent  =  new Intent(mCtx,PushDetailsActivity.class);
+        // Set the Activity to start in a new, empty task
+        resultIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
         PendingIntent pendingIntent = PendingIntent.getActivity(mCtx,0,resultIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 

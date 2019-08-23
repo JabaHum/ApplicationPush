@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
                     AlertDialog.Builder mAlertDialogBuilder  = new AlertDialog.Builder(MainActivity.this);
                     mAlertDialogBuilder.setTitle("Subscribe EzyAgric Notifications");
-                    mAlertDialogBuilder.setMessage("Are you  Sure you Want to Subscribe ?");
+                    mAlertDialogBuilder.setMessage("Are you Sure you Want to Subscribe ?");
                     mAlertDialogBuilder.setCancelable(true);
 
                     mAlertDialogBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
