@@ -58,10 +58,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
 
-                            //Toast.makeText(getApplicationContext(),"You clicked Yes",Toast.LENGTH_SHORT).show();
 
-
-  //String topic = "yes";
                             FirebaseMessaging.getInstance().subscribeToTopic("news")
                                     .addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
@@ -88,9 +85,6 @@ public class MainActivity extends AppCompatActivity {
                                             Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
                                         }
                                     });
-
-                            //Log.d("Topic News", "Subscribed to news topic");
-
                         }
                     });
 

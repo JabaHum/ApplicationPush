@@ -11,19 +11,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-
-
-        <!-- Launcher Activity-->
+        <activity android:name=".PushDetailsActivity"></activity>
+        <!-- Launcher Activity -->
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- Services -->
-        <service android:name=".MyFirebaseMessagingService"
+        </activity> <!-- Services -->
+        <service
+            android:name=".MyFirebaseMessagingService"
             android:enabled="false"
             android:exported="false">
             <intent-filter>

@@ -17,6 +17,22 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     }
 
     @Override
+    public void onNewToken(String token) {
+        super.onNewToken(token);
+
+        Log.d(TAG, "Refreshed token: " + token);
+
+        // If you want to send messages to this application instance or
+        // manage this apps subscriptions on the server side, send the
+        // Instance ID token to your app server.
+        sendRegistrationToServer(token);
+    }
+
+    private  void sendRegistrationToServer(String token){
+
+    }
+
+    @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         if (remoteMessage.getData() != null ){
 
@@ -38,25 +54,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             Toast.makeText(getApplicationContext(),"Remote Message"+remoteMessage.getNotification().getBody(), Toast.LENGTH_SHORT).show();
         }
 
-
-
-
-    }
-
-    @Override
-    public void onNewToken(String token) {
-        //super.onNewToken(s);
-
-            Log.d("Token", "Refreshed token: " + token);
-
-            // If you want to send messages to this application instance or
-            // manage this apps subscriptions on the server side, send the
-            // Instance ID token to your app server.
-            sendRegistrationToServer(token);
-
-    }
-
-    private  void sendRegistrationToServer (String s){
 
     }
 
