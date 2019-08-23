@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ApplicationPush</string>
+    <string name="msg_subscribed">You Subscribed to Ezy Agric Notifications</string>
+    <string name="msg_subscribe_failed">You Unsubscribed to Ezy Agric Notifications</string>
 </resources>
