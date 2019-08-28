@@ -13,9 +13,14 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".PushDetailsActivity"
-
             android:parentActivityName=".MainActivity"
-            tools:targetApi="jelly_bean" />
+            tools:targetApi="jelly_bean">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <!-- Launcher Activity -->
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -23,7 +28,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- Services -->
+        </activity>
+        <!-- Services -->
         <service
             android:name=".MyFirebaseMessagingService"
             android:enabled="false"
